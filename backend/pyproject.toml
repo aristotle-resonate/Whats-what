@@ -12,11 +12,12 @@ dependencies = [
     "celery[redis]>=5.4",
     "redis>=5.2",
     "httpx>=0.28",
-    "pydantic>=2.10",
+    "pydantic[email]>=2.10",
     "vaderSentiment>=3.3",
     "feedparser>=6.0",
     "beautifulsoup4>=4.12",
     "resend>=2.0",
+    "PyJWT>=2.8",
 ]
 
 [project.optional-dependencies]

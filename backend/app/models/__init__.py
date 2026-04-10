@@ -1,4 +1,5 @@
 from app.models.digest import DigestSubscription
+from app.models.magic_link import MagicLink
 from app.models.mention import Mention
 from app.models.source import CollectionError, Source
 from app.models.trending import TrendingScore
@@ -12,4 +13,5 @@ __all__ = [
     "Source",
     "CollectionError",
     "DigestSubscription",
+    "MagicLink",
 ]

@@ -25,6 +25,9 @@ class Settings(BaseSettings):
     spotify_client_id: str = ""
     spotify_client_secret: str = ""
 
+    # Frontend base URL (used in magic link emails)
+    frontend_url: str = "http://localhost:3000"
+
     model_config = {"env_file": ".env"}
 
 

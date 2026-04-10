@@ -7,6 +7,24 @@ class Settings(BaseSettings):
     secret_key: str = "dev-secret-key-change-in-production"
     resend_api_key: str = ""
 
+    # Reddit
+    reddit_client_id: str = ""
+    reddit_client_secret: str = ""
+    reddit_user_agent: str = "whats-what/0.1"
+
+    # Yelp
+    yelp_api_key: str = ""
+
+    # Eventbrite
+    eventbrite_api_key: str = ""
+
+    # Bandsintown
+    bandsintown_app_id: str = "whats-what"
+
+    # Spotify
+    spotify_client_id: str = ""
+    spotify_client_secret: str = ""
+
     model_config = {"env_file": ".env"}
 
 

@@ -1,1 +1,4 @@
 __pycache__/
+*.egg-info/
+alembic/__pycache__/
+alembic/versions/__pycache__/

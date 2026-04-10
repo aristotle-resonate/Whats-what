@@ -25,7 +25,6 @@ A city pulse tracker that aggregates signals from social media, event platforms,
 | Task Queue | Celery + Redis |
 | Database | PostgreSQL |
 | Email delivery | Resend (or SendGrid) |
-| SMS delivery | Twilio |
 | Frontend hosting | Vercel |
 | Backend + DB hosting | Railway |
 
@@ -103,7 +102,7 @@ scored_at
 
 ### `digest_subscriptions`
 ```
-id, user_id, city, categories (array), frequency, format (email | sms | both)
+id, user_id, city, categories (array), frequency, format (email)
 ```
 
 ### `sources`
@@ -223,9 +222,6 @@ What's Hot in Austin Today · Thursday April 10
 ↓ [Fading spot] — reviews cooling after ownership change
 ```
 
-### SMS Format (Twilio)
-3 items max, one line each, with link to full dashboard.
-
 ---
 
 ## Onboarding
@@ -268,8 +264,7 @@ Results stored in `user_preferences`. Dashboard and digest personalize immediate
 | PostgreSQL | Railway | ~$5–10 |
 | Redis | Railway | ~$5 |
 | Email (Resend) | Resend free tier (3k/mo) | $0 |
-| SMS (Twilio) | Pay-per-message | ~$5–10 |
-| **Total** | | **~$20–40/month** |
+| **Total** | | **~$20–30/month** |
 
 ---
 

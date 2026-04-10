@@ -24,7 +24,6 @@ dev = [
     "pytest>=8.3",
     "pytest-asyncio>=0.25",
     "pytest-cov>=6.0",
-    "httpx>=0.28",
     "anyio>=4.7",
 ]
 

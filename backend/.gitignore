@@ -1,4 +1,8 @@
+.env
 __pycache__/
+*.pyc
+.pytest_cache/
+dist/
 *.egg-info/
 alembic/__pycache__/
 alembic/versions/__pycache__/

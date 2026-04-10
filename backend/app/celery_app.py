@@ -7,7 +7,7 @@ celery_app = Celery(
     "whats_what",
     broker=settings.redis_url,
     backend=settings.redis_url,
-    include=["app.tasks.collect"],
+    include=["app.tasks.collect", "app.tasks.score"],
 )
 
 celery_app.conf.update(
@@ -20,6 +20,10 @@ celery_app.conf.update(
         "collect-all-daily": {
             "task": "collect.run_all",
             "schedule": crontab(hour=2, minute=0),  # 2am UTC daily
+        },
+        "score-all-daily": {
+            "task": "score.run_all",
+            "schedule": crontab(hour=3, minute=0),  # 3am UTC — runs after collection
         },
     },
 )

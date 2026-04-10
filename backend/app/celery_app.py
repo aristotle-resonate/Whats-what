@@ -1,4 +1,6 @@
 from celery import Celery
+from celery.schedules import crontab
+
 from app.config import settings
 
 celery_app = Celery(
@@ -14,4 +16,10 @@ celery_app.conf.update(
     accept_content=["json"],
     timezone="UTC",
     enable_utc=True,
+    beat_schedule={
+        "collect-all-daily": {
+            "task": "collect.run_all",
+            "schedule": crontab(hour=2, minute=0),  # 2am UTC daily
+        },
+    },
 )
